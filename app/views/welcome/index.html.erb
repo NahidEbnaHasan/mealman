@@ -1,0 +1,12 @@
+<div class="text-center">
+  <%= form_for(@user, url: user_session_path(@user), html: { class: 'user_session form-sign-in' }) do |f| %>
+      <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+      <%#= f.label :email, nil, { class: 'sr-only' } %>
+      <%= f.email_field :email, autofocus: false, autocomplete: '', class: 'form-control', placeholder: 'Email address' %>
+      <%#= f.label :password, nil, { class: 'sr-only' } %>
+      <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+      <%= f.submit 'Sign in', { class: 'btn btn-block btn-outline-danger' } %>
+      <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-block btn-outline-primary' %>
+      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+  <% end %>
+</div>
