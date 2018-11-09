@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_23_105717) do
+ActiveRecord::Schema.define(version: 2018_11_09_072432) do
+
+  create_table "meals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "group_id"
+    t.date "date"
+    t.boolean "breakfast_done", default: false
+    t.boolean "lunch_done", default: false
+    t.boolean "dinner_done", default: false
+    t.decimal "num_breakfast_taken", precision: 10, scale: 2
+    t.decimal "num_lunch_taken", precision: 10, scale: 2
+    t.decimal "num_dinner_taken", precision: 10, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_meals_on_group_id", unique: true
+    t.index ["user_id"], name: "index_meals_on_user_id", unique: true
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false

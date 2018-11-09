@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm">
+    <p>Meal Details <%= Date.today.month %></p>
+    <table class="table-bordered">
+      <thead>
+      <th>Date</th>
+      <th>Breakfast</th>
+      <th>Lunch</th>
+      <th>Dinner</th>
+      </thead>
+      <tbody>
+      <% Date.today.beginning_of_month..Date.today.end_of_month do |date| %>
+          <tr><td><%= date.to_s %></td></tr>
+          <% meal = @data[:meals].find{ |m| m['date'] == date } %>
+          <% if meal.nil? %>
+              <tr><td>0</td></tr>
+              <tr><td>0</td></tr>
+              <tr><td>0</td></tr>
+          <% else %>
+              <tr><td><%= meal['num_breakfast_taken'] rescue 0 %></td></tr>
+              <tr><td><%= meal['num_lunch_taken'] rescue 0 %></td></tr>
+              <tr><td><%= meal['num_dinner_taken'] rescue 0 %></td></tr>
+          <% end %>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

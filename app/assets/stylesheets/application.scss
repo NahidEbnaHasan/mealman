@@ -18,3 +18,25 @@
 @import "welcome";
 @import "users";
 //@import "font-awesome";
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 40px;
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
