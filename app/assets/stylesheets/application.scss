@@ -21,11 +21,15 @@
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+//  margin-bottom: 60px;
 }
 
 body > .container {
   padding: 60px 15px 0;
+}
+
+.container{
+    margin-top: 60px;
 }
 
 .footer{
