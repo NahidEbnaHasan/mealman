@@ -28,3 +28,4 @@
 #Ignore unecessary files from IDE
 /.idea
 /.idea/*
+/config/database.yml

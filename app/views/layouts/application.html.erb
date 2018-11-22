@@ -59,15 +59,16 @@
       </div>
     </nav>
   </header>
-  <main>
-    <div class="container" role="main">
+  <content>
+    <div class="container-fluid" role="content">
+      <% flash.each do |key, value| %>
+          <div class="alert alert-primary alert-<%= key %>" role="alert"><%= value %></div>
+      <% end %>
       <%= yield %>
     </div>
-  </main>
-  <footer class="footer">
-    <div class="container">
-      <p>copyright mealman 2018</p>
-    </div>
+  </content>
+  <footer class="footer page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">© 2018 Copyright: MealMan</div>
   </footer>
   </body>
 </html>

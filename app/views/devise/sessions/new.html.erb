@@ -26,9 +26,6 @@
 <div class="text-center">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html:{ class: 'user_session form-sign-in' }) do |f| %>
 <!--      <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>-->
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
       <%#= f.label :email, nil, { class: 'sr-only' } %>
       <%= f.email_field :email, autofocus: false, autocomplete: '', class: 'form-control', placeholder: 'Email address' %>
       <%#= f.label :password, nil, { class: 'sr-only' } %>
