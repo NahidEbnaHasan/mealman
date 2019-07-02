@@ -20,8 +20,10 @@
 //@import "font-awesome";
 
 body {
+  background-image: image-url('mealman.jpg');
+  background-size: cover;
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  //margin-bottom: 60px;
 }
 
 body > .container-fluid {
