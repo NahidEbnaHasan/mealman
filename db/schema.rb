@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 2018_11_09_072432) do
     t.boolean "breakfast_done", default: false
     t.boolean "lunch_done", default: false
     t.boolean "dinner_done", default: false
-    t.decimal "num_breakfast_taken", precision: 10, scale: 2
-    t.decimal "num_lunch_taken", precision: 10, scale: 2
-    t.decimal "num_dinner_taken", precision: 10, scale: 2
+    t.decimal "breakfast_count", precision: 10, scale: 2
+    t.decimal "lunch_count", precision: 10, scale: 2
+    t.decimal "dinner_count", precision: 10, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["group_id"], name: "index_meals_on_group_id", unique: true
