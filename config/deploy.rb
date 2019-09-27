@@ -5,15 +5,15 @@
 
 lock '3.11.0'
 
-set :application, 'application'
+set :application, 'mealman'
 set :repo_url, '#' # Put Git url (Ex: https://github.com/user/repo.git)
 set :deploy_user, :deployer
-set :deploy_path, '/apps'
+set :deploy_path, "/home/#{fetch(:deploy_user)}/apps"
 set :pty, true
 set :tmp_dir, "/tmp"
 
 set :rbenv_type, :system
-set :rbenv_ruby, '2.5.0'
+set :rbenv_ruby, '2.5.1'
 set :rbenv_prefix,
     "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w(rake gem bundle ruby rails)

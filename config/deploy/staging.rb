@@ -7,14 +7,14 @@ set :server_port_ssl, 3443
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 
 # Don't forget to put your server ip
-server '192.168.33.10', user: fetch(:deploy_user).to_s, roles: %w(app db), primary: true
-server '192.168.33.11', user: fetch(:deploy_user).to_s, roles: %w(app), primary: true
-server '192.168.33.12', user: fetch(:deploy_user).to_s, roles: %w(app), primary: true
+server '3.225.135.0', user: fetch(:deploy_user).to_s, roles: %w(app db), primary: true
+# server '3.225.135.0', user: fetch(:deploy_user).to_s, roles: %w(app), primary: true
+# server '3.225.135.0', user: fetch(:deploy_user).to_s, roles: %w(app), primary: true
 
 set :server_names, {
-    '192.168.33.10': '192.168.33.10 node0.server',
-    '192.168.33.11': '192.168.33.11 node1.server',
-    '192.168.33.12': '192.168.33.12 node2.server',
+    '3.225.135.0': '3.225.135.0',
+    #'3.225.135.0': '3.225.135.0 node1.server',
+    #'3.225.135.0': '3.225.135.0 node2.server',
 }
 
 set :deploy_to, "#{fetch(:deploy_path)}/#{fetch(:full_app_name)}"
