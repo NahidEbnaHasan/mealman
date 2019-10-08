@@ -6,7 +6,7 @@
 lock '3.11.0'
 
 set :application, 'mealman'
-set :repo_url, '#' # Put Git url (Ex: https://github.com/user/repo.git)
+set :repo_url, 'git@github.com:nehasan/mealman.git' # Put Git url (Ex: https://github.com/user/repo.git)
 set :deploy_user, :deployer
 set :deploy_path, "/home/#{fetch(:deploy_user)}/apps"
 set :pty, true
@@ -64,7 +64,7 @@ set(
 
 namespace :deploy do
   before :deploy, 'deploy:check_revision'
-  before :deploy, "deploy:run_tests"
+  #before :deploy, "deploy:run_tests"
   after 'deploy:symlink:shared', 'deploy:compile_assets_locally'
   after :finishing, 'deploy:cleanup'
   before 'deploy:setup_config', 'nginx:remove_default_vhost'

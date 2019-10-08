@@ -1,5 +1,5 @@
 set :stage, :staging
-set :branch, :development
+set :branch, :master
 
 set :server_port, 3000
 set :server_port_ssl, 3443
