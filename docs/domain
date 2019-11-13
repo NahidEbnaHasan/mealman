@@ -1,0 +1,11 @@
+1. user sign in
+2. user sign up
+3. no meal details will appear until joining any group or at least 2 persons in a group
+4. user can join multiple groups. meal calculation will be continued differently in different groups
+5. every group should have one unique hash key and user can find the group with hash key if he wants to join
+6. to join a group user need to send a join request
+7. user can also send request to join his group to other users
+8. need one group table (id, name) [basic table columns]
+9. need one groups_users table to manage many to many relationship between user and group
+10. group join request can be sent to email or can be shown on the UI (new join request)
+11. user can also see his sent requests to join in a group
